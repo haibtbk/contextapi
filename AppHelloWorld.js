@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Component1 from './helloworld/Component1'; 
 import HelloContext from './helloworld/Context';
 
-class App extends Component {
+class AppHelloWorld extends Component {
   state = {
-    message: 'Hello World Bui Hai'
+    message: 'Hello Bui Hai'
   }
   render() {
     return (
@@ -16,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppHelloWorld;

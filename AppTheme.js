@@ -29,7 +29,7 @@ import ThemeProvider, { ThemeContext } from './ThemeProvider'
 
 const ThemeConsumer = ThemeContext.Consumer
 
-class App extends React.Component {
+class AppTheme extends React.Component {
 
   render() {
     return (
@@ -39,15 +39,6 @@ class App extends React.Component {
             {theme => {
               return (
                 <View>
-                  <Pressable
-                    onPress={() => {
-                      console.log('pressed');
-                    }}
-                    style={({ pressed }) => ({
-                      backgroundColor: pressed ? 'grey' : 'white'
-                    })}>
-                    <Text style={styles.text}>Press Me!</Text>
-                  </Pressable>
                   <Text style={styles[theme]}>{theme}</Text>
                 </View>
               )
@@ -63,7 +54,7 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   dark: {
     width: '100%',
-    height: 200,
+    height: '100%',
     alignItems: 'center',
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -122,7 +113,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default AppTheme;
 
 // import React from 'react';
 // import { Text, View, TouchableOpacity, SafeAreaView } from 'react-native';

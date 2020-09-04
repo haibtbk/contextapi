@@ -3,7 +3,7 @@ import { Button, SafeAreaView, Text, View } from 'react-native'
 import { CounterContext } from './counter/CounterContext_'
 import { CounterContextProvider } from './counter/CounterContext_'
 
-const App = () => {
+const AppCounter = () => {
 
 
   const renderUsingUsecontext = () => {
@@ -41,4 +41,4 @@ const App = () => {
   )
 }
 
-export default App
+export default AppCounter
