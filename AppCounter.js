@@ -1,12 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Button, SafeAreaView, Text, View } from 'react-native'
-import { CounterContext } from './counter/CounterContext_'
-import { CounterContextProvider } from './counter/CounterContext_'
+import { CounterContextProvider, CounterContext } from './counter/CounterContext'
 
 const AppCounter = () => {
 
 
-  const renderUsingUsecontext = () => {
+  const renderUsingUsecontext = (props) => {
     // Using useContext API
     const { count, increment, decrement } = React.useContext(CounterContext)
     return (
@@ -35,7 +34,7 @@ const AppCounter = () => {
   return (
     <SafeAreaView>
       <CounterContextProvider>
-        {renderUsingConsomers()}
+        {renderUsingUsecontext()}
       </CounterContextProvider>
     </SafeAreaView>
   )

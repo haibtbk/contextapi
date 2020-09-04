@@ -18,9 +18,9 @@ const counterContextWrapper = (component) => ({
   },
 })
 
-export const CounterContext = React.createContext({})
+export const CounterContext_ = React.createContext({})
 
-export class CounterContextProvider extends React.Component {
+export class CounterContextProvider_ extends React.Component {
   state = {
     context: counterContextWrapper(this)
   }

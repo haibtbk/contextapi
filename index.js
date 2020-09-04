@@ -3,7 +3,7 @@
  */
 
 import { AppRegistry } from 'react-native';
-import App from './AppHelloWorld.js';
+import App from './AppCounter.js';
 import { name as appName } from './app.json';
 
 
