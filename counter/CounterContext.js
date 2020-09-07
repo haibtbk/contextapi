@@ -1,29 +1,24 @@
 // CounterContext.js
-import React, {useState} from 'react'
-
+import React, { useState } from 'react'
+import CounterContext from './CounterContext'
 // Declaring the state object globally.
-const initialCounterState = {
-  count: 0,
-  increment: () =>{},
-  decrement: () => {}
-}
 
-export const CounterContext = React.createContext(initialCounterState)
 
-export const CounterContextProvider = (props) => {
-  
-  const [context, setContext] = useState({count:0})
-  
+
+export const CounterContextProvider = ({ children }) => {
+
+  const [context, setContext] = useState({ count: 0, increment, decrement })
+
   const increment = () => {
-    setContext({count: context.count + 1})
+    setContext({ ...context, count: context.count + 1 })
   }
   const decrement = () => {
-    setContext({count: context.count -1})
+    setContext({ ...context, count: context.count - 1 })
   }
 
   return (
-    <CounterContext.Provider value={{count:context.count, decrement, increment}}>
-      {props.children}
+    <CounterContext.Provider value={{ count: 0, increment, decrement }}>
+        {children}
     </CounterContext.Provider>
   )
 

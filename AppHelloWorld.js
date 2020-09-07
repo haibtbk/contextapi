@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Alert } from "react-native";
-import Component1 from './helloworld/Component1'; 
-import HelloContext from './helloworld/Context';
+import ComponentA from './helloworldcontext/ComponentA'; 
+import HelloContext from './helloworldcontext/Context';
 
 class AppHelloWorld extends Component {
   state = {
@@ -11,7 +11,7 @@ class AppHelloWorld extends Component {
     return (
       <HelloContext.Provider
         value={ {message: this.state.message, callback: (text) => {Alert.alert(text)}} }>
-          <Component1 />
+          <ComponentA />
       </HelloContext.Provider>
     );
   }
