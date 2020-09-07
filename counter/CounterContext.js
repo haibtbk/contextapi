@@ -1,6 +1,6 @@
 // CounterContext.js
 import React, { useState } from 'react'
-import CounterContext from './CounterContext'
+import CounterContext from './Context.js'
 // Declaring the state object globally.
 
 
